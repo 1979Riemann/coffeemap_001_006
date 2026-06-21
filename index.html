@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北海岸 20 間夢幻咖啡廳指南 - 吹海風．喝咖啡．療癒心靈</title>
+    <meta name="description" content="精選台灣北海岸（三芝、石門、金山、萬里）20 間絕美海景咖啡廳，包含詳細介紹、特色標籤、營業資訊與動態篩選功能，帶您開啟一趟放鬆身心的蔚藍海岸之旅。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: '#0f4c81',
+                        sky: '#1e90ff',
+                        sand: '#f4e9d8',
+                        coastal: '#fbf8f3',
+                        darkblue: '#0a3256'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #fbf8f3;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(15, 76, 129, 0.3), rgba(10, 50, 86, 0.7));
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f4e9d8;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #0f4c81;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl sm:text-2xl font-bold text-ocean flex items-center gap-2">
+                        <i class="fa-solid fa-mug-saucer text-sky animate-pulse"></i>
+                        <span class="tracking-wider">北海岸咖啡時光</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-ocean font-medium transition-colors">首頁</a>
+                    <a href="#cafe-list" class="text-gray-600 hover:text-ocean font-medium transition-colors">咖啡廳列表</a>
+                    <a href="#map-section" class="text-gray-600 hover:text-ocean font-medium transition-colors">尋找地圖</a>
+                    <a href="#travel-tips" class="text-gray-600 hover:text-ocean font-medium transition-colors">旅行Tips</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-ocean focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="#" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-sand/40 hover:text-ocean font-medium">首頁</a>
+            <a href="#cafe-list" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-sand/40 hover:text-ocean font-medium">咖啡廳列表</a>
+            <a href="#map-section" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-sand/40 hover:text-ocean font-medium">尋找地圖</a>
+            <a href="#travel-tips" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-sand/40 hover:text-ocean font-medium">旅行Tips</a>
+        </div>
+    </nav>
+
+    <header class="relative h-[85vh] sm:h-screen w-full bg-cover bg-center flex items-center justify-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto text-white mt-12">
+            <span class="inline-block px-4 py-1.5 bg-sky/30 backdrop-blur-md rounded-full text-xs sm:text-sm font-medium tracking-widest uppercase mb-4 sm:mb-6 border border-white/20 animate-fade-in">Summer Coastal Vibe</span>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-4 sm:mb-6 font-sans">
+                探索北海岸的 <span class="text-sand font-serif italic">20</span> 間夢幻海景咖啡廳
+            </h1>
+            <p class="text-base sm:text-xl md:text-2xl font-light text-gray-200 mb-8 max-w-2xl mx-auto tracking-wide">
+                吹海風．喝咖啡．療癒心靈 —— 沿著蔚藍公路，尋找最觸動心跳的靠海座位。
+            </p>
+            <a href="#cafe-list" class="inline-flex items-center gap-2 px-8 py-3.5 bg-sky hover:bg-blue-600 text-white font-medium rounded-full shadow-lg hover:shadow-sky/30 transform hover:-translate-y-0.5 transition-all duration-300 group">
+                探索咖啡廳
+                <i class="fa-solid fa-arrow-down transition-transform group-hover:translate-y-1"></i>
+            </a>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
+            <svg class="w-full h-12 sm:h-24 min-h-[40px] max-h-[100px]" preserveAspectRatio="none" viewBox="0 24 150 28" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"/>
+                </defs>
+                <g class="parallax">
+                    <use fill="#fbf8f3" x="48" y="0" xlink:href="#gentle-wave" opacity="0.7"/>
+                    <use fill="#fbf8f3" x="48" y="3" xlink:href="#gentle-wave" opacity="0.5"/>
+                    <use fill="#fbf8f3" x="48" y="5" xlink:href="#gentle-wave" opacity="0.3"/>
+                    <use fill="#fbf8f3" x="48" y="7" xlink:href="#gentle-wave"/>
+                </g>
+            </svg>
+        </div>
+    </header>
+
+    <section class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="flex items-center gap-2 text-ocean font-semibold tracking-wider text-sm uppercase">
+                    <span class="w-8 h-[2px] bg-ocean"></span> About North Coast
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-darkblue tracking-tight">
+                    沿著藍色公路，<br class="hidden sm:inline">遇見最浪漫的海岸香氣
+                </h2>
+                <p class="text-gray-600 leading-relaxed text-justify">
+                    台灣北海岸是一條集結藍天、巨石、海浪與浪漫的藍色公路。從三芝的淺水灣出發，一路延伸到石門的白沙灣、金山的跳石海岸，直到萬里的蜿蜒海岬，沿途散落著數十間風格各異的夢幻海景咖啡廳。這裡不僅是遠離都市喧囂的避風港，幕後更是旅人尋找靈感與平靜的療癒之所。挑一間靠海的窗邊座位，聽著潮起潮落，讓海風吹散所有煩憂，享受專屬的蔚藍時光。
+                </p>
+                <div class="grid grid-cols-3 gap-4 pt-2">
+                    <div class="text-center p-3 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-2xl font-bold text-ocean font-serif">4區</div>
+                        <div class="text-xs text-gray-500 mt-1">完整覆蓋</div>
+                    </div>
+                    <div class="text-center p-3 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-2xl font-bold text-ocean font-serif">20+</div>
+                        <div class="text-xs text-gray-500 mt-1">精選推薦</div>
+                    </div>
+                    <div class="text-center p-3 bg-white rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-2xl font-bold text-ocean font-serif">100%</div>
+                        <div class="text-xs text-gray-500 mt-1">療癒海景</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7 grid grid-cols-12 gap-4">
+                <div class="col-span-7">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="北海岸海景1" class="rounded-2xl w-full h-48 sm:h-64 object-cover shadow-md hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="col-span-5">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=400&q=80" alt="咖啡廳室內" class="rounded-2xl w-full h-48 sm:h-64 object-cover shadow-md hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="col-span-5">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80" alt="美味甜點" class="rounded-2xl w-full h-40 sm:h-48 object-cover shadow-md hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="col-span-7">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="看海座位" class="rounded-2xl w-full h-40 sm:h-48 object-cover shadow-md hover:scale-[1.02] transition-transform duration-500" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cafe-list" class="bg-sand/30 border-y border-sand/50 py-8 sticky top-16 z-30 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-darkblue flex items-center gap-2">
+                        <i class="fa-solid fa-compass text-sky"></i> 尋找命定海景座位
+                    </h3>
+                    <p class="text-xs text-gray-500 mt-0.5">可透過地區下拉選單或輸入關鍵字即時過濾</p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <div class="relative flex-1 sm:w-48">
+                        <select id="region-filter" class="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-gray-700 font-medium appearance-none focus:outline-none focus:border-ocean focus:ring-2 focus:ring-ocean/10 transition-all cursor-pointer">
+                            <option value="all">全部區域 (20間)</option>
+                            <option value="三芝">三芝區</option>
+                            <option value="石門">石門區</option>
+                            <option value="金山">金山區</option>
+                            <option value="萬里">萬里區</option>
+                        </select>
+                        <i class="fa-solid fa-location-dot absolute left-3.5 top-3.5 text-gray-400"></i>
+                        <i class="fa-solid fa-chevron-down absolute right-3.5 top-3.5 text-gray-400 pointer-events-none text-xs"></i>
+                    </div>
+                    
+                    <div class="relative flex-1 sm:w-64">
+                        <input id="search-input" type="text" placeholder="搜尋名稱、特色、甜點..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-gray-700 placeholder-gray-400 focus:outline-none focus:border-ocean focus:ring-2 focus:ring-ocean/10 transition-all">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-3 text-xs text-gray-500 font-medium">
+                目前顯示：<span id="result-count" class="text-ocean font-bold text-sm">20</span> 間精選店家
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="cafe-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+            </div>
+        
+        <div id="no-results" class="hidden text-center py-20 bg-white rounded-3xl border border-dashed border-gray-200 max-w-md mx-auto mt-8">
+            <i class="fa-solid fa-cloud-sun-rain text-5xl text-gray-300 mb-4 animate-bounce"></i>
+            <h4 class="text-lg font-bold text-gray-600">找不到符合條件的咖啡廳</h4>
+            <p class="text-sm text-gray-400 mt-1 px-4">試著調整地區篩選或減少關鍵字字數再試一次吧！</p>
+        </div>
+    </section>
+
+    <div id="cafe-modal" class="fixed inset-0 z-50 overflow-y-auto hidden flex items-center justify-center p-4 sm:p-6 bg-darkblue/60 backdrop-blur-sm">
+        <div class="relative bg-white rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 max-h-[90vh] flex flex-col">
+            <button id="modal-close-btn" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/80 backdrop-blur-md text-gray-700 hover:text-black shadow-md flex items-center justify-center transition-transform hover:scale-105" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <div class="overflow-y-auto custom-scrollbar flex-1">
+                <div class="relative h-56 sm:h-72 w-full bg-cover bg-center" id="modal-img">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-6 right-6 text-white">
+                        <span id="modal-region" class="px-2.5 py-0.5 bg-sky text-xs font-semibold rounded-md tracking-wider">三芝區</span>
+                        <h4 id="modal-title" class="text-2xl sm:text-3xl font-bold mt-1.5 drop-shadow-md">海邊灶咖</h4>
+                    </div>
+                </div>
+                
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div>
+                        <h5 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">店家簡介</h5>
+                        <p id="modal-desc" class="text-gray-600 leading-relaxed text-sm sm:text-base">詳細描述載入中...</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-b border-gray-100 py-5">
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 text-sm">
+                                <i class="fa-solid fa-location-dot text-ocean mt-0.5 w-4 text-center"></i>
+                                <div>
+                                    <span class="font-bold block text-gray-700">詳細地址</span>
+                                    <span id="modal-address" class="text-gray-500 text-xs">新北市三芝區...</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm">
+                                <i class="fa-solid fa-clock text-ocean mt-0.5 w-4 text-center"></i>
+                                <div>
+                                    <span class="font-bold block text-gray-700">營業時間</span>
+                                    <span id="modal-hours" class="text-gray-500 text-xs">10:00 - 18:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 text-sm">
+                                <i class="fa-solid fa-bowl-food text-ocean mt-0.5 w-4 text-center"></i>
+                                <div>
+                                    <span class="font-bold block text-gray-700">特色推薦</span>
+                                    <span id="modal-signature" class="text-gray-500 text-xs">手作戚風蛋糕、特調冰咖啡</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 text-sm">
+                                <i class="fa-solid fa-tags text-ocean mt-0.5 w-4 text-center"></i>
+                                <div>
+                                    <span class="font-bold block text-gray-700">標籤屬性</span>
+                                    <div id="modal-tags" class="flex flex-wrap gap-1 mt-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-2 text-center">
+                        <a id="modal-maps-link" href="#" target="_blank" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-ocean hover:bg-darkblue text-white text-sm font-medium rounded-xl shadow-md transition-colors group">
+                            <i class="fa-solid fa-diamond-turn-right group-hover:animate-bounce"></i>
+                            使用 Google Maps 導航前往
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="map-section" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-darkblue tracking-tight">北海岸咖啡聚落分佈</h2>
+                <p class="text-gray-500 mt-2 text-sm sm:text-base">沿著台2線淡金公路，輕鬆規劃一日看海喝咖啡悠閒行程</p>
+                <div class="w-12 h-1 bg-sky mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-sand/20 p-2 sm:p-4">
+                <iframe 
+                    class="w-full h-80 sm:h-[450px] rounded-xl"
+                    src="https://maps.google.com/maps?q=北海岸風景區&t=&z=11&ie=UTF8&iwloc=&output=embed" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="travel-tips" class="py-16 sm:py-24 bg-gradient-to-b from-white to-sand/40 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-darkblue tracking-tight">北海岸看海旅行祕笈</h2>
+                <p class="text-gray-500 mt-2 text-sm sm:text-base">出發前先讀完這篇，打造完美的療癒下午茶行程</p>
+                <div class="w-12 h-1 bg-sky mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sky/10 text-sky flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">交通與自駕建議</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        建議自駕或租車沿「台2線公路」行駛機動性最高。若搭乘大眾運輸，可於捷運淡水站轉乘「台灣好行-皇冠北海岸線」或淡水客運。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sky/10 text-sky flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-square-p"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">便利停車指南</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        三芝淺水灣、石門白沙灣周邊均設有收費停車場與路邊停車格。熱門名店多數附設專屬停車場，假日建議提早於中午前抵達。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sky/10 text-sky flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">絕美拍照時間</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        下午 3 點至 5 點是魔幻夕陽光線的黃金期。想要拍到明亮、飽和度高的高彩度蔚藍海景，則推薦在上午 11 點至下午 1 點間拍攝。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sky/10 text-sky flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-800 mb-2">貼心注意事項</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        北海岸多數網美老宅咖啡廳週末人潮眾多且不開放訂位，部分人氣景點實施「預約制」或「全面禁菸、寵物牽繩」，請務必提前確認。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-darkblue text-gray-300 pt-16 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="space-y-4">
+                <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-mug-saucer text-sky"></i>
+                    <span class="tracking-wider">北海岸咖啡時光</span>
+                </a>
+                <p class="text-sm text-gray-400 max-w-sm leading-relaxed">
+                    精選北海岸最頂級的 20 間夢幻海景咖啡廳，不論是極簡純白風、美式莊園或溫馨貓咪友善，這裡都有您的專屬蔚藍角落。
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 relative before:absolute before:bottom-0 before:left-0 before:w-8 before:h-[2px] before:bg-sky pb-2">快速連結</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">回到首頁</a></li>
+                    <li><a href="#cafe-list" class="hover:text-white transition-colors">探索 20 間咖啡廳</a></li>
+                    <li><a href="#map-section" class="hover:text-white transition-colors">交通據點地圖</a></li>
+                    <li><a href="#travel-tips" class="hover:text-white transition-colors">海岸旅遊 Tips</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 relative before:absolute before:bottom-0 before:left-0 before:w-8 before:h-[2px] before:bg-sky pb-2">關注我們</h4>
+                <p class="text-sm text-gray-400 mb-4">訂閱最新海景情報，隨時隨地開啟看海生活。</p>
+                <div class="flex space-x-4 text-xl">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-sky hover:text-white flex items-center justify-center transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-sky hover:text-white flex items-center justify-center transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-sky hover:text-white flex items-center justify-center transition-colors" aria-label="Line"><i class="fa-brands fa-line text-sm"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10 pt-8 text-center text-xs text-gray-500">
+            <p>© 2026 北海岸咖啡時光. All rights reserved. 網頁設計：前端網站設計大師</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-ocean hover:bg-sky text-white shadow-xl flex items-center justify-center opacity-0 pointer-events-none transform translate-y-4 transition-all duration-300" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+
+
+    <script>
+        // 20 間夢幻咖啡廳完整官方精選資料庫
+        const cafesData = [
+            {
+                id: 1,
+                name: "海邊灶咖",
+                region: "三芝",
+                image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80",
+                brief: "擁有一整片淺水灣第一排無敵海景，戶外木棧道直通沙灘，峇里島風情讓人一秒出國。",
+                tags: ["海景第一排", "戶外座位", "南洋渡假風", "家常簡餐"],
+                address: "新北市三芝區北勢子45-10號",
+                hours: "10:30 - 18:30 (週二公休)",
+                signature: "古早味燉肉飯、熱帶水果茶",
+                mapUrl: "https://maps.google.com/?q=三芝海邊灶咖"
+            },
+            {
+                id: 2,
+                name: "我們在海邊",
+                region: "三芝",
+                image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80",
+                brief: "全預約制的神祕極簡工業風咖啡館，大面落地窗框住湛藍海景，適合不被打擾的慵懶午後。",
+                tags: ["預約制", "工業風", "手沖精品", "無干擾空間"],
+                address: "新北市三芝區北勢子12-1號",
+                hours: "11:00 - 18:00 (週四公休)",
+                signature: "手沖單品咖啡、烤布朗尼配冰淇淋",
+                mapUrl: "https://maps.google.com/?q=我們在海邊"
+            },
+            {
+                id: 3,
+                name: "公雞咖啡 Le Coq",
+                region: "三芝",
+                image: "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80",
+                brief: "淺水灣超人氣老字號網美名店，店內佈滿法式復古雜貨與多肉植物，戶外巨型水果茶超浮誇。",
+                tags: ["網美打卡", "復古雜貨", "巨型水果茶", "排隊名店"],
+                address: "新北市三芝區北勢子45-16號",
+                hours: "11:00 - 20:00 (天天營業)",
+                signature: "特製新鮮水果茶、超狂炸物拼盤",
+                mapUrl: "https://maps.google.com/?q=公雞咖啡"
+            },
+            {
+                id: 4,
+                name: "夢想地圖 Cafe 海景會館",
+                region: "三芝",
+                image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80",
+                brief: "明亮舒適的地中海藍白風情，內牆印有滿滿正能量文字，搭配金黃酥脆的現烤披薩與海景。",
+                tags: ["地中海風", "現烤披薩", "正能量牆", "適合聚餐"],
+                address: "新北市三芝區北勢子41號",
+                hours: "11:00 - 19:00 (週三公休)",
+                signature: "BBQ烤雞披薩、蔚藍海洋氣泡飲",
+                mapUrl: "https://maps.google.com/?q=夢想地圖Cafe海景會館"
+            },
+            {
+                id: 5,
+                name: "小日波",
+                region: "金山",
+                image: "https://images.unsplash.com/photo-1464979681340-bdd28a61699e?auto=format&fit=crop&w=600&q=80",
+                brief: "隱身金山靠海角落的日系簡約風咖啡廳，提供療癒的手作戚風蛋糕，空間散發著安靜迷人的氣息。",
+                tags: ["日系簡約", "手作戚風", "安靜海景", "文青必訪"],
+                address: "新北市金山區海興路112號",
+                hours: "12:00 - 18:00 (不定期公休)",
+                signature: "宇治抹茶戚風、日式塩鹽拿鐵",
+                mapUrl: "https://maps.google.com/?q=金山小日波"
+            },
+            {
+                id: 6,
+                name: "豹豹咖啡 海邊館",
+                region: "石門",
+                image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80",
+                brief: "座落於白沙灣遊客中心旁，店內有數隻可愛貓咪店長巡邏，二樓擁有大片圓形觀海窗景。",
+                tags: ["貓咪店長", "白沙灣旁", "圓窗海景", "鬆餅推薦"],
+                address: "新北市石門區下員坑33-6號",
+                hours: "11:00 - 18:00 (週一公休)",
+                signature: "黑糖豹紋拿鐵、現烤冰淇淋鬆餅",
+                mapUrl: "https://maps.google.com/?q=豹豹咖啡海邊館"
+            },
+            {
+                id: 7,
+                name: "拾浪咖啡",
+                region: "石門",
+                image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80",
+                brief: "矗立於北海岸公路旁的獨棟海景基地，寵物友善空間，手工肉桂捲香氣撲鼻，看海聽浪極致享受。",
+                tags: ["獨棟老宅", "寵物友善", "招牌肉桂捲", "夜景推薦"],
+                address: "新北市石門區阿里荖10號",
+                hours: "11:00 - 19:00 (週一二公休)",
+                signature: "核桃焦糖肉桂捲、冰釀咖啡",
+                mapUrl: "https://maps.google.com/?q=拾浪咖啡"
+            },
+            {
+                id: 8,
+                name: "草里一號店",
+                region: "石門",
+                image: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=600&q=80",
+                brief: "由濱海公路老宅改建的純白系絕美空間，極具現代感的簡約線條，完美襯托草里漁港的靜謐藍。",
+                tags: ["純白老宅", "極簡美學", "精品拉花", "港口海景"],
+                address: "新北市石門區阿里荖33號",
+                hours: "11:30 - 18:30 (週四公休)",
+                signature: "法式千層蛋糕、極致拿鐵咖啡",
+                mapUrl: "https://maps.google.com/?q=草里一號店"
+            },
+            {
+                id: 9,
+                name: "洋荳子咖啡館",
+                region: "金山",
+                image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80",
+                brief: "北海岸最經典的藍白希臘聖托里尼風城堡，依山傍海的絕佳位置，陪伴無數人走過青春看海歲月。",
+                tags: ["藍白希臘風", "經典老店", "聖托里尼", "下午茶套餐"],
+                address: "新北市金山區忠義路29-1號",
+                hours: "10:30 - 18:30 (天天營業)",
+                signature: "焦糖瑪奇朵、義式綜合冰淇淋",
+                mapUrl: "https://maps.google.com/?q=洋荳子咖啡館"
+            },
+            {
+                id: 10,
+                name: "靠北過日子 Q.B.Days",
+                region: "金山",
+                image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80",
+                brief: "亮藍色顯眼外牆與充滿硬派衝浪、露營風格的文青聖地，販售療癒烤煎餅與特色鐵鍋烏龍麵。",
+                tags: ["衝浪風格", "文青選物", "鐵鍋烏龍麵", "特色煎餅"],
+                address: "新北市金山區海興路174號",
+                hours: "11:00 - 18:30 (週三公休)",
+                signature: "明治牛奶糖烤煎餅、小山園抹茶拿鐵",
+                mapUrl: "https://maps.google.com/?q=靠北過日子"
+            },
+            {
+                id: 11,
+                name: "金山跳石沒有名字的咖啡店",
+                region: "金山",
+                image: "https://images.unsplash.com/photo-1561677978-583a8c7a4b43?auto=format&fit=crop&w=600&q=80",
+                brief: "位於著名的跳石海岸線旁，黃色繽紛木質小屋與露天吧台，是公路旅行中最耀眼的歇腳站。",
+                tags: ["跳石海岸", "黃色小屋", "露天吧台", "IG爆紅"],
+                address: "新北市金山區永興里跳石4號",
+                hours: "12:00 - 18:00 (批), 11:00 - 19:00 (假)",
+                signature: "香草拿鐵、現烤熱壓吐司",
+                mapUrl: "https://maps.google.com/?q=金山跳石沒有名字的咖啡店"
+            },
+            {
+                id: 12,
+                name: "GRAY CAFE 咖灰",
+                region: "石門",
+                image: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=600&q=80",
+                brief: "低調內斂的灰黑色系極簡風，展現極高質感的職人咖啡美學，大窗正對廣闊無垠的太平洋。",
+                tags: ["灰系極簡", "職人咖啡", "隱藏版私房", "質感空間"],
+                address: "新北市石門區中央路43號",
+                hours: "11:00 - 18:00 (週四公休)",
+                signature: "冷萃藝妓咖啡、手作巴斯克乳酪",
+                mapUrl: "https://maps.google.com/?q=GRAY+CAFE+咖灰"
+            },
+            {
+                id: 13,
+                name: "九號咖啡外木山館",
+                region: "萬里",
+                image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80",
+                brief: "擁有超大面無死角觀海玻璃窗，直面外木山海景，提供豐富的炸物拼盤與超消暑冰品。",
+                tags: ["大片玻璃窗", "外木山步道", "超大空間", "炸物拼盤"],
+                address: "新北市萬里區大武崙海岸旁",
+                hours: "10:00 - 19:30 (天天營業)",
+                signature: "漁夫海鮮炸物拼盤、芒果雪花冰",
+                mapUrl: "https://maps.google.com/?q=九號咖啡外木山館"
+            },
+            {
+                id: 14,
+                name: "白日夢 Tea & Café",
+                region: "石門",
+                image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80",
+                brief: "由廢棄國小改建而成，保留了溫馨的課桌椅與寬敞校園，能遠眺海景，適合親子同遊做白日夢。",
+                tags: ["廢校改建", "課桌椅懷舊", "親子友善", "超大停車場"],
+                address: "新北市石門區阿里荖47-2號",
+                hours: "11:00 - 18:00 (平), 11:00 - 19:00 (假)",
+                signature: "手作英式司康、招牌手沖茶品",
+                mapUrl: "https://maps.google.com/?q=白日夢+Tea+Cafe"
+            },
+            {
+                id: 15,
+                name: "元寶咖啡館",
+                region: "金山",
+                image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80",
+                brief: "充滿家常溫馨感的海邊老宅，自家烘焙豆香氣四溢，親切的老闆與慢步調節奏令人非常放鬆。",
+                tags: ["溫馨老宅", "自家烘焙豆", "慢步調空間", "CP值高"],
+                address: "新北市金山區海邊路58號",
+                hours: "10:00 - 18:00 (週三公休)",
+                signature: "招牌曼巴手沖、古早味檸檬塔",
+                mapUrl: "https://maps.google.com/?q=元寶咖啡館"
+            },
+            {
+                id: 16,
+                name: "牛仔莊園",
+                region: "三芝",
+                image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80",
+                brief: "北海岸少見的超巨型美式西部牛仔風情莊園，擁有綠意大草皮，還能近距離與駿馬拍照互動。",
+                tags: ["美式西部風", "互動餵馬", "超大綠意草皮", "網美必訪"],
+                address: "新北市三芝區古庄里108號",
+                hours: "10:00 - 20:00 (週一公休)",
+                signature: "巨無霸美式漢堡、莊園特調拿鐵",
+                mapUrl: "https://maps.google.com/?q=牛仔莊園"
+            },
+            {
+                id: 17,
+                name: "鹿邊咖啡",
+                region: "石門",
+                image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
+                brief: "北海岸著名的深夜貨櫃屋咖啡廳，點亮溫馨燈串，讓夜貓子能在海浪聲的陪伴下愜意暢聊。",
+                tags: ["深夜營業", "工業貨櫃屋", "海浪聲交響", "極度放空"],
+                address: "新北市石門區台2線公路旁",
+                hours: "13:00 - 凌晨 02:00 (天天營業)",
+                signature: "深夜特調可可、脆皮炸雞翅",
+                mapUrl: "https://maps.google.com/?q=鹿邊咖啡"
+            },
+            {
+                id: 18,
+                name: "言方",
+                region: "萬里",
+                image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80",
+                brief: "緊鄰野柳漁港旁的極簡文青老宅，二樓大窗完美框住純樸的港口日常與遠方連綿的海岬。",
+                tags: ["港口海景", "文青老宅", "野柳周邊", "細緻布丁"],
+                address: "新北市萬里區港東路148號",
+                hours: "12:00 - 18:00 (週四五公休)",
+                signature: "手工焦糖香草布丁、文青黑咖啡",
+                mapUrl: "https://maps.google.com/?q=萬里言方"
+            },
+            {
+                id: 19,
+                name: "Zoom In Cafe",
+                region: "三芝",
+                image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=600&q=80",
+                brief: "清新舒適的山海交界祕境，擁有極佳的採光與舒適沙發包廂，特調漸層氣泡飲極具視覺美感。",
+                tags: ["山海交界", "漸層氣泡飲", "極致大採光", "沙發包廂"],
+                address: "新北市三芝區海岸路36號",
+                hours: "11:00 - 19:00 (週一公休)",
+                signature: "盛夏藍天氣泡飲、現烤比利時鬆餅",
+                mapUrl: "https://maps.google.com/?q=Zoom+In+Cafe"
+            },
+            {
+                id: 20,
+                name: "吃飯看海",
+                region: "萬里",
+                image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
+                brief: "全台離海最近的漁村改建海景餐廳兼咖啡廳！能一邊品嚐超鮮美九孔鮑炒飯，一邊欣賞拍岸浪花。",
+                tags: ["九孔鮑炒飯", "超近海景", "漁村改建", "特色風味"],
+                address: "新北市萬里區海岸公路旁",
+                hours: "11:00 - 18:30 (週二三公休)",
+                signature: "招牌鮮美九孔鮑炒飯、炭焙鐵觀音拿鐵",
+                mapUrl: "https://maps.google.com/?q=萬里吃飯看海"
+            }
+        ];
+
+        // 取得 DOM 節點
+        const cafeGrid = document.getElementById('cafe-grid');
+        const regionFilter = document.getElementById('region-filter');
+        const searchInput = document.getElementById('search-input');
+        const resultCount = document.getElementById('result-count');
+        const noResults = document.getElementById('no-results');
+        
+        const modal = document.getElementById('cafe-modal');
+        const modalContent = modal.querySelector('.relative');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        
+        // 初始化渲染卡片
+        function renderCafes(data) {
+            cafeGrid.innerHTML = '';
+            if (data.length === 0) {
+                noResults.classList.remove('hidden');
+                resultCount.textContent = 0;
+                return;
+            }
+            noResults.classList.add('hidden');
+            resultCount.textContent = data.length;
+            
+            data.forEach(cafe => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-300 flex flex-col group cursor-pointer";
+                card.setAttribute('onclick', `openModal(${cafe.id})`);
+                
+                const tagHtml = cafe.tags.map(t => `<span class="px-2 py-0.5 bg-sand/60 text-ocean text-[10px] sm:text-xs rounded-md font-medium">${t}</span>`).join('');
+                
+                card.innerHTML = `
+                    <div class="relative overflow-hidden h-48 sm:h-52 w-full bg-gray-100">
+                        <img src="${cafe.image}" alt="${cafe.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                        <span class="absolute top-3 left-3 px-2.5 py-0.5 bg-ocean/90 backdrop-blur-sm text-white text-xs font-semibold rounded-md tracking-wider shadow-sm z-10">${cafe.region}區</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-bold text-gray-800 group-hover:text-ocean transition-colors flex items-center justify-between">
+                                ${cafe.name}
+                                <i class="fa-regular fa-heart text-gray-300 hover:text-red-500 transition-colors text-sm"></i>
+                            </h4>
+                            <p class="text-xs sm:text-sm text-gray-500 line-clamp-2 leading-relaxed">${cafe.brief}</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1">${tagHtml}</div>
+                            <div class="pt-2 border-t border-gray-50 flex items-center justify-between text-xs text-ocean font-medium group-hover:text-sky transition-colors">
+                                <span>查看詳細故事與菜單</span>
+                                <i class="fa-solid fa-arrow-right-long transform group-hover:translate-x-1.5 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                cafeGrid.appendChild(card);
+            });
+        }
+
+        // 即時搜尋與篩選機制
+        function filterData() {
+            const selectedRegion = regionFilter.value;
+            const searchKeyword = searchInput.value.toLowerCase().trim();
+            
+            const filtered = cafesData.filter(cafe => {
+                const matchesRegion = (selectedRegion === 'all' || cafe.region === selectedRegion);
+                const matchesKeyword = cafe.name.toLowerCase().includes(searchKeyword) || 
+                                       cafe.brief.toLowerCase().includes(searchKeyword) || 
+                                       cafe.tags.some(t => t.toLowerCase().includes(searchKeyword)) ||
+                                       cafe.signature.toLowerCase().includes(searchKeyword);
+                return matchesRegion && matchesKeyword;
+            });
+            
+            renderCafes(filtered);
+        }
+
+        regionFilter.addEventListener('change', filterData);
+        searchInput.addEventListener('input', filterData);
+
+        // Modal 視窗操作
+        function openModal(id) {
+            const cafe = cafesData.find(c => c.id === id);
+            if (!cafe) return;
+            
+            document.getElementById('modal-img').style.backgroundImage = `url('${cafe.image}')`;
+            document.getElementById('modal-region').textContent = `${cafe.region}區`;
+            document.getElementById('modal-title').textContent = cafe.name;
+            document.getElementById('modal-desc').textContent = cafe.brief;
+            document.getElementById('modal-address').textContent = cafe.address;
+            document.getElementById('modal-hours').textContent = cafe.hours;
+            document.getElementById('modal-signature').textContent = cafe.signature;
+            
+            const tagsContainer = document.getElementById('modal-tags');
+            tagsContainer.innerHTML = cafe.tags.map(t => `<span class="px-2 py-0.5 bg-ocean/10 text-ocean text-xs rounded-md font-medium">${t}</span>`).join('');
+            
+            document.getElementById('modal-maps-link').href = cafe.mapUrl;
+            
+            // 顯示動畫
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // 行動版漢堡選單切換
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // 滾動效果：導航列陰影與回到頂部按鈕
+        const navbar = document.getElementById('navbar');
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'bg-white/95');
+                navbar.classList.remove('shadow-sm', 'bg-white/80');
+            } else {
+                navbar.classList.add('shadow-sm', 'bg-white/80');
+                navbar.classList.remove('shadow-md', 'bg-white/95');
+            }
+            
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 初始化第一次渲染
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCafes(cafesData);
+        });
+    </script>
+</body>
+</html>
